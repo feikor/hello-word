@@ -70,6 +70,21 @@ echo "Code Deployed By at $CURDATE" >> /var/log/svn_order.log
 cd /virtualhost/www/order.ip1840.com && /usr/bin/svn update --username ych --password 828282 2>>/var/log/svn_order.log
 
 
+5.@设置帐号密码
+
+vi passwd
+在[users]块中添加用户和密码，格式：帐号=密码，如dan=dan
+6.@设置权限
+
+vi authz
+在末尾添加如下代码：
+[/]
+dan=rw
+w=r
+意思是版本库的根目录dan对其有读写权限，w只有读权限。
+
+
+
 
 
 
