@@ -53,7 +53,7 @@ svnadmin help create
       杀死svn服务
        pkill svnserve
        启动svn
-       svnserve -d -r /application/svndata/
+       svnserve -d -r /virtualhost/svn/
        备注:修改passwd和authz文件不需要重启svn服务而修改svnserve.conf则需要
 
 #!/bin/sh
@@ -68,6 +68,7 @@ export LANG=en_US.UTF-8
 CURDATE=`date`
 echo "Code Deployed By at $CURDATE" >> /var/log/svn_order.log
 cd /virtualhost/www/order.ip1840.com && /usr/bin/svn update --username ych --password 828282 2>>/var/log/svn_order.log
+
 
 
 
