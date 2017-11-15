@@ -69,6 +69,8 @@ CURDATE=`date`
 echo "Code Deployed By at $CURDATE" >> /var/log/svn_order.log
 cd /virtualhost/www/order.ip1840.com && /usr/bin/svn update --username ych --password 828282 2>>/var/log/svn_order.log
 
+svn checkout svn://106.15.88.10/www.bibomb.com
+
 
 5.@设置帐号密码
 
@@ -82,6 +84,11 @@ vi authz
 dan=rw
 w=r
 意思是版本库的根目录dan对其有读写权限，w只有读权限。
+
+#adduser feikor
+//添加一个名为tommy的用户
+#passwd feikor   //修改密码4628
+#usermod -g root feikor
 
 
 
