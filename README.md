@@ -67,7 +67,7 @@ export LANG=en_US.UTF-8
 
 CURDATE=`date`
 echo "Code Deployed By at $CURDATE" >> /var/log/svn_order.log
-cd /virtualhost/www/order.ip1840.com && /usr/bin/svn update --username ych --password 828282 2>>/var/log/svn_order.log
+cd /virtualhost/www/order.ip1840.com && /usr/bin/svn update --no-auth-cache --username ych --password 828282 2>>/var/log/svn_order.log
 
 svn checkout svn://106.15.88.10/www.bibomb.com
 
@@ -91,7 +91,16 @@ w=r
 #usermod -g root feikor
 
 
+svn://203.88.211.18/service.ip1840.com
+svn://172.19.129.188/service.ip1840.com
+svn://127.0.0.1/www.bibomb.com
 
+注意事项：
+post-commit文件的权限
+第一次要网站目录下checkout出来
+update --no-auth-cache  脚本里面忽略用户密码
+ 
+ 
 
 
 
