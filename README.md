@@ -71,6 +71,11 @@ cd /virtualhost/www/order.ip1840.com && /usr/bin/svn update --no-auth-cache --us
 
 svn checkout svn://106.15.88.10/www.bibomb.com
 
+svn checkout svn://127.0.0.1/sv.bibomb.com
+svn checkout svn://localhost/sv.bibomb.com
+
+svn co svn://203.88.211.16/sv.ip888.com --username dd  --password 33
+
 
 5.@设置帐号密码
 
