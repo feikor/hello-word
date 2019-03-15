@@ -1,4 +1,4 @@
-# hello-word
+# subversion
 
 查询是否安装  
 rpm -qa subversion
